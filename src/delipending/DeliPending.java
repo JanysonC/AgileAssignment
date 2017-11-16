@@ -92,7 +92,7 @@ public class DeliPending {
         System.out.println("\nPlease insert the time to check delivery status: ");
         time = sc.nextLine();
         
-        System.out.println("=================================================================================================================="
+             System.out.println("=================================================================================================================="
                                 + "=================================="); 
             System.out.println("||Delivery Man   |Reataurant            |Deliver From           |Deliver To                  "
                                 + "|Customer Name      |Time End        |Status         ||");
