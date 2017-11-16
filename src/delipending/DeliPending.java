@@ -114,7 +114,6 @@ public class DeliPending {
 
             if(d.getStatus()=="Delivered"){
                 g++;
-                
             }
              else if(d2.getStatus()=="Delivered"){
                         g++;
@@ -126,8 +125,7 @@ public class DeliPending {
             
             for(int a=0; a<1; a++){
                 if(d.getStatus()=="On Delivering"){
-                sum++;
-                
+                        sum++;
             }
              else if(d2.getStatus()=="On Delivering"){
                         sum++;
@@ -139,8 +137,7 @@ public class DeliPending {
             
                  System.out.println("\nThe number of total delivered :" + g);
                  System.out.println("The number of total which still on delivering :" + sum);
-                 
-                
+     
             
             }  
             else if(time.equals("1200") || time.equals("12pm")){
