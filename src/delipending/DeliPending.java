@@ -11,6 +11,8 @@ public class DeliPending {
         ArrayList<DeliveryInfo> myArray = new ArrayList<>();
         
         String time;
+        int sum = 0;
+        int g = 0;
         
         String[] DeliName = {"John","Lucifer","Anthony"};
         String[] Restau = {"James Foo Restaurant","Sushi Mentai","Blue Chef"};
@@ -105,6 +107,41 @@ public class DeliPending {
             System.out.println("2." + d3.getDeliName() + "         " + d3.getRestaurant() +"              "+ d3.getDeliFrom() + "       " 
                                 + d3.getDeliTo() +"     "+ d3.getCustName() + "               " + d3.getTimeEnd() + "       " 
                                 + d3.getStatus());
+            
+            
+            
+            for(int i=0; i<2; i++){
+
+            if(d.getStatus()=="Delivered"){
+                g++;
+                
+            }
+             else if(d2.getStatus()=="Delivered"){
+                        g++;
+            }   
+             else if(d3.getStatus()=="Delivered"){
+                        g++;
+            }   
+          }    
+            
+            for(int a=0; a<1; a++){
+                if(d.getStatus()=="On Delivering"){
+                sum++;
+                
+            }
+             else if(d2.getStatus()=="On Delivering"){
+                        sum++;
+            }   
+             else if(d3.getStatus()=="On Delivering"){
+                        sum++;
+            }  
+            }
+            
+                 System.out.println("\nThe number of total delivered :" + g);
+                 System.out.println("The number of total which still on delivering :" + sum);
+                 
+                
+            
             }  
             else if(time.equals("1200") || time.equals("12pm")){
               System.out.println("1." + e.getDeliName() + "            " + e.getRestaurant() +"    "+ e.getDeliFrom() + "      " 
@@ -116,6 +153,37 @@ public class DeliPending {
              System.out.println("3." + e3.getDeliName() + "           " + e3.getRestaurant() +"         "+ e3.getDeliFrom() + "       " 
                                   + e3.getDeliTo() +"     "+ e3.getCustName() + "              " + e3.getTimeEnd() + "        " 
                                   + e3.getStatus());  
+             
+             for(int i=0; i<2; i++){
+
+            if(d.getStatus()=="Delivered"){
+                g++;
+                
+            }
+             else if(d2.getStatus()=="Delivered"){
+                        g++;
+            }   
+             else if(d3.getStatus()=="Delivered"){
+                        g++;
+            }   
+          }    
+            
+            for(int a=0; a<1; a++){
+                if(d.getStatus()=="On Delivering"){
+                sum++;
+                
+            }
+             else if(d2.getStatus()=="On Delivering"){
+                        sum++;
+            }   
+             else if(d3.getStatus()=="On Delivering"){
+                        sum++;
+            }  
+            }
+             
+             
+             System.out.println("\nThe number of total delivered :" + g);
+             System.out.println("The number of total which still on delivering :" + sum);
             }
                 else{
                      System.out.println("================================================================================================="
