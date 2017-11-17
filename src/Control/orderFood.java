@@ -23,8 +23,7 @@ public class orderFood implements orderFoodInterface{
     public int displayRestaurant() {
         int selection = 0;
           do{
-           System.out.println("Please enter correctly.");
-           System.out.println("");
+           
         try{
         
         System.out.println("1.James Foo Western Food");
@@ -38,7 +37,8 @@ public class orderFood implements orderFoodInterface{
        
         
         }catch(InputMismatchException ex){
-            
+            System.out.println("Please enter correctly.");
+           System.out.println("");
             selection = 0;
         }
         
