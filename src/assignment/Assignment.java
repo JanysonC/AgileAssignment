@@ -139,8 +139,17 @@ public class Assignment {
         
         String display = "";
         int orderNo=1;
-        
-        display = String.format("\n***************************************************************************************************************************\nOrder No: %05d\nRestaurant: James Foo Western Food\n***************************************************************************************************************************\n",orderNo++);
+        String restName="";
+        if(selection==1){
+             restName = "James Foo Western Food";
+        }
+        else if(selection==2){
+             restName = "myBurgerLag Oug";
+        }
+        else if(selection==3){
+            restName = "Mc Donald's";
+        }
+        display = String.format("\n***************************************************************************************************************************\nOrder No: %05d\nRestaurant: %s\n***************************************************************************************************************************\n",orderNo++,restName);
         System.out.println(display);
         System.out.println("          Food Name                              Price                 Unit             Subtotal");
         System.out.println(abc);
