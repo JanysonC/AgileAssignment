@@ -1,4 +1,4 @@
-package Main;
+package Objects;
 
 public class DeliveryMan {
     private String Name;

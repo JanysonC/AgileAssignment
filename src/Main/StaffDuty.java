@@ -1,5 +1,6 @@
 package Main;
 
+import Objects.DeliveryMan;
 import java.util.*;
 import java.text.*;
 
@@ -16,12 +17,11 @@ public class StaffDuty {
     static DateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy hh:mm:ss");
     static String Date;
 
-    private static void personInfo() {
+    public static void personInfo() {
         dmList.add(new DeliveryMan("Flora", "DM1234", "Female", "OFF", "", ""));
         dmList.add(new DeliveryMan("James", "DM5223", "Male", "OFF", "", ""));
         dmList.add(new DeliveryMan("Rock", "DM9198", "Male", "OFF", "", ""));
     }
-
     public static void showInfo() {
         int choose;
         int decide;
@@ -32,7 +32,7 @@ public class StaffDuty {
             System.out.println("********************************************************************************************************************");
             System.out.println("No.\tStaff_ID\tStaff_Name\tStatus\t\t\tClock_In\t\t\tClock_Out");
             for (int i = 0; i < dmList.size(); i++) {
-                System.out.println(number + ".\t" + dmList.get(i).getID() + "\t\t" + dmList.get(i).getName() + "\t\t"+ dmList.get(i).getStatus() + "\t\t" + dmList.get(i).getClockIn() + "\t\t\t" + dmList.get(i).getClockOut());
+                System.out.println(number + ".\t" + dmList.get(i).getID() + "\t\t" + dmList.get(i).getName() + "\t\t" + dmList.get(i).getStatus() + "\t\t" + dmList.get(i).getClockIn() + "\t\t\t" + dmList.get(i).getClockOut());
                 number++;
             }
             System.out.println("********************************************************************************************************************");
@@ -48,7 +48,7 @@ public class StaffDuty {
     }
 
     public static void selectMenu(int no) {
-        
+
         System.out.println("*****************************");
         System.out.println("1.\t Clock In");
         System.out.println("2.\t Clock Out");
@@ -64,14 +64,14 @@ public class StaffDuty {
         } else if (choose == 2) {
             date = new Date();
             Date = dateFormat.format(date);
-            if(dmList.get(no).getClockIn() != ""){
-            dmList.get(no).setClockOut(String.format(Date));
-            dmList.get(no).setStatus("OFF");
-            System.out.println("Your clock out time ----> " + dmList.get(no).getClockOut());
-            System.out.println("See You Tommorrow!!!");
-            }
-            else
+            if (dmList.get(no).getClockIn() != "") {
+                dmList.get(no).setClockOut(String.format(Date));
+                dmList.get(no).setStatus("OFF");
+                System.out.println("Your clock out time ----> " + dmList.get(no).getClockOut());
+                System.out.println("See You Tommorrow!!!");
+            } else {
                 System.out.println("You haven't clock in yet! How you gonna clock out first?! LOL");
+            }
         }
     }
 }
