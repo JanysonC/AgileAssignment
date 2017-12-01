@@ -9,7 +9,7 @@ import Model.Food;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -39,7 +39,7 @@ public class orderFood implements orderFoodInterface{
         }catch(InputMismatchException ex){
             System.out.println("Please enter correctly.");
            System.out.println("");
-            selection = 0;
+             selection = 0;
         }
         
          }while(selection<1 || selection >4);
@@ -92,19 +92,29 @@ public class orderFood implements orderFoodInterface{
     @Override
     public int orderFoods() {
         int selected = 0;
+        boolean result =true;
         Scanner scanner = new Scanner(System.in);
-        
+        do{
         System.out.print("Please Enter your choice(Order food):");
         try{
             selected = scanner.nextInt();
-            
+            if(selected!=0){
+                
+            result = false;
+        }
         }catch(Exception ex){
             System.out.println("Please enter correctly.");
+            System.out.println("");
+            scanner.nextLine();
         }
+        }while(result||selected<1||selected>3);
         
       
         return selected;
     }
+        
+    
+     
 
     @Override
     public ArrayList<Food> insertFoodToArrayList() {
@@ -190,17 +200,27 @@ public class orderFood implements orderFoodInterface{
     
   
     public int enterQuantity() {
-        
-         
-        int Quantity = 0;
+         int Quantity = 0;
+         boolean result = true;      
         Scanner s = new Scanner(System.in);
-        
+        do{
         System.out.printf("Enter your quantity(Quantity):");
-        Quantity = s.nextInt();
+        try{
+            Quantity = s.nextInt();
+            if(Quantity!=0)
+            result = false;
+        }catch(InputMismatchException ex){
+            System.out.println("Please enter only number");
+            System.out.println("");
+            s.nextLine();
+          
+        }
         
+        }while(result);
+         
     
-        
         return Quantity;
+       
     }
 
     @Override

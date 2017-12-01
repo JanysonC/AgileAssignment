@@ -1,10 +1,10 @@
-
 package assignment;
 
 import Control.orderFood;
 import Control.orderFoodInterface;
 import Model.Food;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
@@ -31,6 +31,7 @@ public class Assignment {
         f1 = orderFood.insertFoodToArrayList1();
         f2 = orderFood.insertFoodToArrayList2();
         String choice = "";
+        char ch = ' ';
         
        
        
@@ -63,7 +64,7 @@ public class Assignment {
         int a=0;
         a++;
         
-        choice = continues();
+        ch = continues();
         
         for(int i=0; i<a; i++){
         
@@ -94,7 +95,7 @@ public class Assignment {
         System.out.println(String.format("Total Price : RM %.2f",totalPrices));
         int b=0;
         b++;
-        choice = continues();
+        ch = continues();
         for(int i=0; i<b; i++){
         
         
@@ -122,7 +123,7 @@ public class Assignment {
         System.out.println(String.format("Total Price : RM %.2f",totalPrices));
         int c=0;
         c++;
-        choice = continues();
+        ch= continues();
         for(int i=0; i<c; i++){
         
         
@@ -134,7 +135,7 @@ public class Assignment {
         
           
         }
-        }while(choice.equals("y")||choice.equals("Y"));
+        }while(ch=='y'||ch=='Y');
        
         
         String display = "";
@@ -166,14 +167,35 @@ public class Assignment {
         
         
     }
+    
    
-   
-    public  static String continues(){
-         System.out.printf("Do you want to eat other food? Y/N to confirm order.\n");
+    public  static char continues(){
+        boolean result = true;
         Scanner s = new Scanner(System.in);
-        String choice = s.next();
-        
+        char choice;
+        do{
+            System.out.printf("Do you want to eat other food? Y/N to confirm order.\n");
+            choice = s.next().charAt(0);
+            if(choice =='Y'){
+                result = false;
+            }
+            else if(choice == 'y'){
+                 result = false;
+            }
+            else if(choice == 'N'){
+                 result = false;
+            }
+            else if(choice == 'n'){
+                 result = false;
+            }
+            else{
+                 result = true;
+            }
+        }while(result);
         return choice;
+       
     }
+    
+   
     
 }
