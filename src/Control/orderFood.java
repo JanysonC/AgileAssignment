@@ -99,7 +99,7 @@ public class orderFood implements orderFoodInterface{
             selected = scanner.nextInt();
             
         }catch(Exception ex){
-            JOptionPane.showMessageDialog(null, ex.toString());
+            System.out.println("Please enter correctly.");
         }
         
       
@@ -147,7 +147,7 @@ public class orderFood implements orderFoodInterface{
         
          food = new Food();
         food.setFoodId("F02");
-        food.setName("Big AF CheeseBurgers (Double Trouble)");
+        food.setName("Big AF CheeseBurgers");
         food.setPrice(23.90);
         f1.add(food);
         
@@ -204,14 +204,19 @@ public class orderFood implements orderFoodInterface{
     }
 
     @Override
-    public double calculateTotal(int quantity,double price) {
+    public double calculateTotal(int quantity, double price) {
+       
+        return quantity*price;
+
+            
+        }
         
-//     
- return quantity*price;
-       
-       
-       
-    }
+      
+        
+    
+
+   
+
 
    
 

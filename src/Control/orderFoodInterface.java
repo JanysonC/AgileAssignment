@@ -13,6 +13,10 @@ public interface orderFoodInterface {
     public ArrayList<Food> insertFoodToArrayList();
     public ArrayList<Food> insertFoodToArrayList1();
     public ArrayList<Food> insertFoodToArrayList2();
-    public double calculateTotal(int quantity,double price);
+
+    public double calculateTotal(int quantity, double price);
+
+    
+
     
 }
