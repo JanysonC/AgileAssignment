@@ -24,6 +24,7 @@ public class Assignment {
         int c=0;
         int no=0;
         int foodOrdered;
+        
       
         ArrayList<String> orderedMenu = new ArrayList<>();
         
@@ -120,13 +121,20 @@ public class Assignment {
         if(ch=='n'||ch=='N'){
         System.out.println("");
         System.out.println("You have been selected the following food:");
-        System.out.println("No        Food Name                              Price                 Unit             Subtotal");
-        for(int g=0;g<restaurant1.size();g++ )
+        System.out.println("No        Food Name\t\t         Price                  Unit            Subtotal");
+ /*here*/        for(int g=0;g<restaurant1.size();g++ )
             {
-                    System.out.print(String.format("%d\t%24s\t\tRM %5.2f\t\t%d\t\tRM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
-            }
+                if(restaurant1.get(g).getName().length() ==21){
+                   System.out.print(String.format("%d        %21s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else if(restaurant1.get(g).getName().length() ==17){
+                    System.out.print(String.format("%d        %17s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else 
+                    System.out.print(String.format("%d        %s\t\t        RM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
         System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
-        System.out.println(String.format("\t\t\t\t\t\t\t\t\t   Total Price: RM %6.2f\n",totalPrices));
+        System.out.println(String.format("\t\t\t\t\t\t\t\t  Total Price: RM %6.2f\n",totalPrices));
         int confirmChoice=0;
         boolean result =true;
         Scanner s = new Scanner(System.in);
@@ -155,13 +163,20 @@ public class Assignment {
             boolean result1 = true;
             int choiceDel=0;
             System.out.println("");
-            System.out.println("No        Food Name                              Price                 Unit             Subtotal");
+             System.out.println("No        Food Name\t\t         Price                  Unit            Subtotal");
             for(int g=0;g<restaurant1.size();g++ )
             {
-                    System.out.print(String.format("%d\t%24s\t\tRM %5.2f\t\t%d\t\tRM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
-            }
-            System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
-            System.out.println(String.format("\t\t\t\t\t\t\t\t\t   Total Price: RM %6.2f\n",totalPrices));
+                if(restaurant1.get(g).getName().length() ==21){
+                   System.out.print(String.format("%d        %21s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else if(restaurant1.get(g).getName().length() ==17){
+                    System.out.print(String.format("%d        %17s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else 
+                    System.out.print(String.format("%d        %s\t\t        RM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+        System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
+        System.out.println(String.format("\t\t\t\t\t\t\t\t  Total Price: RM %6.2f\n",totalPrices));
             System.out.println("Please enter the no of food that u want to delete:");
             choiceDel  = s1.nextInt();
             
@@ -185,37 +200,58 @@ public class Assignment {
           //  totalPrices-=f.get(choiceDel-1).getPrice();
             System.out.println("");
             System.out.println("You have been selected the following food:");
-            System.out.println("No        Food Name                              Price                 Unit             Subtotal");
-        for(int g=0;g<restaurant1.size();g++ )
+             System.out.println("No        Food Name\t\t         Price                  Unit            Subtotal");
+           for(int g=0;g<restaurant1.size();g++ )
             {
-                    System.out.print(String.format("%d\t%24s\t\tRM %5.2f\t\t%d\t\tRM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
-            }
+                if(restaurant1.get(g).getName().length() ==21){
+                   System.out.print(String.format("%d        %21s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else if(restaurant1.get(g).getName().length() ==17){
+                    System.out.print(String.format("%d        %17s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else 
+                    System.out.print(String.format("%d        %s\t\t        RM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
         System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
-        System.out.println(String.format("\t\t\t\t\t\t\t\t\t   Total Price: RM %6.2f\n",totalPrices));
+        System.out.println(String.format("\t\t\t\t\t\t\t\t  Total Price: RM %6.2f\n",totalPrices));
             }
         
             else if(confirmChoice==1){
-                display = String.format("\n***************************************************************************************************************************\nOrder No: %05d\nRestaurant: %s\n***************************************************************************************************************************\n",orderNo++,restName);
+                display = String.format("\n*********************************************************************************************************************\nOrder No: %05d\nRestaurant: %s\n*********************************************************************************************************************\n",orderNo++,restName);
                 System.out.println(display);
-                System.out.println("No        Food Name                              Price                 Unit             Subtotal");
-                for(int g=0;g<restaurant1.size();g++ )
+                 System.out.println("No        Food Name\t\t         Price                  Unit            Subtotal");
+ /*here*/       for(int g=0;g<restaurant1.size();g++ )
             {
-                    System.out.print(String.format("%d\t%24s\t\tRM %5.2f\t\t%d\t\tRM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
-            }
-                System.out.println("---------------------------------------------------------------------------------------------------------------------\n");
-                System.out.println(String.format("\t\t\t\t\t\t\t\t\t   Total Price: RM %6.2f\n",totalPrices));
+                if(restaurant1.get(g).getName().length() ==21){
+                   System.out.print(String.format("%d        %21s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else if(restaurant1.get(g).getName().length() ==17){
+                    System.out.print(String.format("%d        %17s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else 
+                    System.out.print(String.format("%d        %s\t\t        RM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+        System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
+        System.out.println(String.format("\t\t\t\t\t\t\t\t  Total Price: RM %6.2f\n",totalPrices));
             }
 
         else if(confirmChoice == 1){
-        display = String.format("\n***************************************************************************************************************************\nOrder No: %05d\nRestaurant: %s\n***************************************************************************************************************************\n",orderNo++,restName);
+        display = String.format("\n*********************************************************************************************************************\nOrder No: %05d\nRestaurant: %s\n*********************************************************************************************************************\n",orderNo++,restName);
         System.out.println(display);
-        System.out.println("No        Food Name                              Price                 Unit             Subtotal");
-        for(int g=0;g<restaurant1.size();g++ )
+         System.out.println("No        Food Name\t\t         Price                  Unit            Subtotal");
+ /*here*/        for(int g=0;g<restaurant1.size();g++ )
             {
-                    System.out.print(String.format("%d\t%24s\t\tRM %5.2f\t\t%d\t\tRM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
-            }
-        System.out.println("---------------------------------------------------------------------------------------------------------------------\n");
-        System.out.println(String.format("\t\t\t\t\t\t\t\t\t   Total Price: RM %6.2f\n",totalPrices));
+                if(restaurant1.get(g).getName().length() ==21){
+                   System.out.print(String.format("%d        %21s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else if(restaurant1.get(g).getName().length() ==17){
+                    System.out.print(String.format("%d        %17s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else 
+                    System.out.print(String.format("%d        %s\t\t        RM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+        System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
+        System.out.println(String.format("\t\t\t\t\t\t\t\t  Total Price: RM %6.2f\n",totalPrices));
         }
         }while(result||confirmChoice==2);
         
@@ -278,13 +314,37 @@ public class Assignment {
         if(ch=='n'||ch=='N'){
         System.out.println("");
         System.out.println("You have been selected the following food:");
-        System.out.println("No        Food Name                              Price                 Unit             Subtotal");
-        for(int g=0;g<restaurant1.size();g++ )
+         System.out.println("No        Food Name\t\t                 Price                  Unit            Subtotal");
+         /*
+         
+         for(int g=0;g<restaurant1.size();g++ )
             {
-                    System.out.print(String.format("%d\t%24s\t\tRM %5.2f\t\t%d\t\tRM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                if(restaurant1.get(g).getName().length() ==21){
+                   System.out.print(String.format("%d        %21s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else if(restaurant1.get(g).getName().length() ==17){
+                    System.out.print(String.format("%d        %17s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else 
+                    System.out.print(String.format("%d        %s\t\t        RM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+         
+         */
+         
+ /*here*/        for(int g=0;g<restaurant1.size();g++ )
+            {
+                if(restaurant1.get(g).getName().length()==26){
+                   System.out.print(String.format("%d        %26s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else if(restaurant1.get(g).getName().length()==20){
+                   System.out.print(String.format("%d        %20s\t\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else 
+                    System.out.print(String.format("%d        %s\t\t        RM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                
             }
         System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
-        System.out.println(String.format("\t\t\t\t\t\t\t\t\t   Total Price: RM %6.2f\n",totalPrices));
+        System.out.println(String.format("\t\t\t\t\t\t\t\t\t  Total Price: RM %6.2f\n",totalPrices));
         int confirmChoice=0;
         boolean result =true;
         Scanner s = new Scanner(System.in);
@@ -313,13 +373,21 @@ public class Assignment {
             boolean result1 = true;
             int choiceDel=0;
             System.out.println("");
-            System.out.println("No        Food Name                              Price                 Unit             Subtotal");
-            for(int g=0;g<restaurant1.size();g++ )
+            System.out.println("No        Food Name\t\t                 Price                  Unit            Subtotal");
+ /*here*/        for(int g=0;g<restaurant1.size();g++ )
             {
-                    System.out.print(String.format("%d\t%24s\t\tRM %5.2f\t\t%d\t\tRM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                if(restaurant1.get(g).getName().length()==26){
+                   System.out.print(String.format("%d        %26s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else if(restaurant1.get(g).getName().length()==20){
+                   System.out.print(String.format("%d        %20s\t\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else 
+                    System.out.print(String.format("%d        %s\t\t        RM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                
             }
-            System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
-            System.out.println(String.format("\t\t\t\t\t\t\t\t\t   Total Price: RM %6.2f\n",totalPrices));
+        System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
+        System.out.println(String.format("\t\t\t\t\t\t\t\t\t  Total Price: RM %6.2f\n",totalPrices));
             System.out.println("Please enter the no of food that u want to delete:");
             choiceDel  = s1.nextInt();
             
@@ -343,37 +411,61 @@ public class Assignment {
           //  totalPrices-=f.get(choiceDel-1).getPrice();
             System.out.println("");
             System.out.println("You have been selected the following food:");
-            System.out.println("No        Food Name                              Price                 Unit             Subtotal");
-        for(int g=0;g<restaurant1.size();g++ )
+             System.out.println("No        Food Name\t\t                 Price                  Unit            Subtotal");
+ /*here*/        for(int g=0;g<restaurant1.size();g++ )
             {
-                    System.out.print(String.format("%d\t%24s\t\tRM %5.2f\t\t%d\t\tRM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                if(restaurant1.get(g).getName().length()==26){
+                   System.out.print(String.format("%d        %26s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else if(restaurant1.get(g).getName().length()==20){
+                   System.out.print(String.format("%d        %20s\t\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else 
+                    System.out.print(String.format("%d        %s\t\t        RM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                
             }
         System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
-        System.out.println(String.format("\t\t\t\t\t\t\t\t\t   Total Price: RM %6.2f\n",totalPrices));
+        System.out.println(String.format("\t\t\t\t\t\t\t\t\t  Total Price: RM %6.2f\n",totalPrices));
             }
         
             else if(confirmChoice==1){
-                display = String.format("\n***************************************************************************************************************************\nOrder No: %05d\nRestaurant: %s\n***************************************************************************************************************************\n",orderNo++,restName);
+               display = String.format("\n*********************************************************************************************************************\nOrder No: %05d\nRestaurant: %s\n*********************************************************************************************************************\n",orderNo++,restName);
                 System.out.println(display);
-                System.out.println("No        Food Name                              Price                 Unit             Subtotal");
-                for(int g=0;g<restaurant1.size();g++ )
+                 System.out.println("No        Food Name\t\t                 Price                  Unit            Subtotal");
+ /*here*/        for(int g=0;g<restaurant1.size();g++ )
             {
-                    System.out.print(String.format("%d\t%24s\t\tRM %5.2f\t\t%d\t\tRM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                if(restaurant1.get(g).getName().length()==26){
+                   System.out.print(String.format("%d        %26s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else if(restaurant1.get(g).getName().length()==20){
+                   System.out.print(String.format("%d        %20s\t\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else 
+                    System.out.print(String.format("%d        %s\t\t        RM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                
             }
-                System.out.println("---------------------------------------------------------------------------------------------------------------------\n");
-                System.out.println(String.format("\t\t\t\t\t\t\t\t\t   Total Price: RM %6.2f\n",totalPrices));
+        System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
+        System.out.println(String.format("\t\t\t\t\t\t\t\t\t  Total Price: RM %6.2f\n",totalPrices));
             }
 
         else if(confirmChoice == 1){
-        display = String.format("\n***************************************************************************************************************************\nOrder No: %05d\nRestaurant: %s\n***************************************************************************************************************************\n",orderNo++,restName);
+        display = String.format("\n*********************************************************************************************************************\nOrder No: %05d\nRestaurant: %s\n*********************************************************************************************************************\n",orderNo++,restName);
         System.out.println(display);
-        System.out.println("No        Food Name                              Price                 Unit             Subtotal");
-        for(int g=0;g<restaurant1.size();g++ )
+         System.out.println("No        Food Name\t\t                 Price                  Unit            Subtotal");
+ /*here*/        for(int g=0;g<restaurant1.size();g++ )
             {
-                    System.out.print(String.format("%d\t%24s\t\tRM %5.2f\t\t%d\t\tRM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                if(restaurant1.get(g).getName().length()==26){
+                   System.out.print(String.format("%d        %26s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else if(restaurant1.get(g).getName().length()==20){
+                   System.out.print(String.format("%d        %20s\t\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else 
+                    System.out.print(String.format("%d        %s\t\t        RM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                
             }
-        System.out.println("---------------------------------------------------------------------------------------------------------------------\n");
-        System.out.println(String.format("\t\t\t\t\t\t\t\t\t   Total Price: RM %6.2f\n",totalPrices));
+        System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
+        System.out.println(String.format("\t\t\t\t\t\t\t\t\t  Total Price: RM %6.2f\n",totalPrices));
         }
         }while(result||confirmChoice==2);
         
@@ -436,13 +528,20 @@ public class Assignment {
         if(ch=='n'||ch=='N'){
         System.out.println("");
         System.out.println("You have been selected the following food:");
-        System.out.println("No        Food Name                              Price                 Unit             Subtotal");
-        for(int g=0;g<restaurant1.size();g++ )
+         System.out.println("No        Food Name\t\t         Price                  Unit            Subtotal");
+ /*here*/        for(int g=0;g<restaurant1.size();g++ )
             {
-                    System.out.print(String.format("%d\t%24s\t\tRM %5.2f\t\t%d\t\tRM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                if(restaurant1.get(g).getName().length()==22){
+                   System.out.print(String.format("%d        %22s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else if(restaurant1.get(g).getName().length()==13){
+                   System.out.print(String.format("%d        %13s\t\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else
+                    System.out.print(String.format("%d        %s\t\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
             }
         System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
-        System.out.println(String.format("\t\t\t\t\t\t\t\t\t   Total Price: RM %6.2f\n",totalPrices));
+        System.out.println(String.format("\t\t\t\t\t\t\t\t  Total Price: RM %6.2f\n",totalPrices));
         int confirmChoice=0;
         boolean result =true;
         Scanner s = new Scanner(System.in);
@@ -471,20 +570,27 @@ public class Assignment {
             boolean result1 = true;
             int choiceDel=0;
             System.out.println("");
-            System.out.println("No        Food Name                              Price                 Unit             Subtotal");
-            for(int g=0;g<restaurant1.size();g++ )
+             System.out.println("No        Food Name\t\t         Price                  Unit            Subtotal");
+ /*here*/         for(int g=0;g<restaurant1.size();g++ )
             {
-                    System.out.print(String.format("%d\t%24s\t\tRM %5.2f\t\t%d\t\tRM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                if(restaurant1.get(g).getName().length()==22){
+                   System.out.print(String.format("%d        %22s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else if(restaurant1.get(g).getName().length()==13){
+                   System.out.print(String.format("%d        %13s\t\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else
+                    System.out.print(String.format("%d        %s\t\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
             }
-            System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
-            System.out.println(String.format("\t\t\t\t\t\t\t\t\t   Total Price: RM %6.2f\n",totalPrices));
+        System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
+        System.out.println(String.format("\t\t\t\t\t\t\t\t  Total Price: RM %6.2f\n",totalPrices));
             System.out.println("Please enter the no of food that u want to delete:");
             choiceDel  = s1.nextInt();
             
            
             totalPrices -=  restaurant1.get(choiceDel-1).getPrice()*restaurant1.get(choiceDel-1).getQuantity();
            restaurant1.remove(choiceDel-1);
-           System.out.println(restaurant1.size());
+           //System.out.println(restaurant1.size());
            int v=0;
            for(int g=0;g<restaurant1.size();g++ )
             {
@@ -500,37 +606,58 @@ public class Assignment {
           //  totalPrices-=f.get(choiceDel-1).getPrice();
             System.out.println("");
             System.out.println("You have been selected the following food:");
-            System.out.println("No        Food Name                              Price                 Unit             Subtotal");
-        for(int g=0;g<restaurant1.size();g++ )
+             System.out.println("No        Food Name\t\t         Price                  Unit            Subtotal");
+ /*here*/        for(int g=0;g<restaurant1.size();g++ )
             {
-                    System.out.print(String.format("%d\t%24s\t\tRM %5.2f\t\t%d\t\tRM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                if(restaurant1.get(g).getName().length()==22){
+                   System.out.print(String.format("%d        %22s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else if(restaurant1.get(g).getName().length()==13){
+                   System.out.print(String.format("%d        %13s\t\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else
+                    System.out.print(String.format("%d        %s\t\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
             }
         System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
-        System.out.println(String.format("\t\t\t\t\t\t\t\t\t   Total Price: RM %6.2f\n",totalPrices));
+        System.out.println(String.format("\t\t\t\t\t\t\t\t  Total Price: RM %6.2f\n",totalPrices));
             }
         
             else if(confirmChoice==1){
-                display = String.format("\n***************************************************************************************************************************\nOrder No: %05d\nRestaurant: %s\n***************************************************************************************************************************\n",orderNo++,restName);
+                display = String.format("\n*********************************************************************************************************************\nOrder No: %05d\nRestaurant: %s\n*********************************************************************************************************************\n",orderNo++,restName);
                 System.out.println(display);
-                System.out.println("No        Food Name                              Price                 Unit             Subtotal");
-                for(int g=0;g<restaurant1.size();g++ )
+                 System.out.println("No        Food Name\t\t         Price                  Unit            Subtotal");
+ /*here*/         for(int g=0;g<restaurant1.size();g++ )
             {
-                    System.out.print(String.format("%d\t%24s\t\tRM %5.2f\t\t%d\t\tRM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                if(restaurant1.get(g).getName().length()==22){
+                   System.out.print(String.format("%d        %22s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else if(restaurant1.get(g).getName().length()==13){
+                   System.out.print(String.format("%d        %13s\t\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else
+                    System.out.print(String.format("%d        %s\t\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
             }
-                System.out.println("---------------------------------------------------------------------------------------------------------------------\n");
-                System.out.println(String.format("\t\t\t\t\t\t\t\t\t   Total Price: RM %6.2f\n",totalPrices));
+        System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
+        System.out.println(String.format("\t\t\t\t\t\t\t\t  Total Price: RM %6.2f\n",totalPrices));
             }
 
         else if(confirmChoice == 1){
-        display = String.format("\n***************************************************************************************************************************\nOrder No: %05d\nRestaurant: %s\n***************************************************************************************************************************\n",orderNo++,restName);
+        display = String.format("\n***************************************************************************************************************\nOrder No: %05d\nRestaurant: %s\n*********************************************************************************************************************\n",orderNo++,restName);
         System.out.println(display);
-        System.out.println("No        Food Name                              Price                 Unit             Subtotal");
-        for(int g=0;g<restaurant1.size();g++ )
+         System.out.println("No        Food Name\t\t         Price                  Unit            Subtotal");
+ /*here*/         for(int g=0;g<restaurant1.size();g++ )
             {
-                    System.out.print(String.format("%d\t%24s\t\tRM %5.2f\t\t%d\t\tRM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                if(restaurant1.get(g).getName().length()==22){
+                   System.out.print(String.format("%d        %22s\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else if(restaurant1.get(g).getName().length()==13){
+                   System.out.print(String.format("%d        %13s\t\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
+                }
+                else
+                    System.out.print(String.format("%d        %s\t\t\tRM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
             }
-        System.out.println("---------------------------------------------------------------------------------------------------------------------\n");
-        System.out.println(String.format("\t\t\t\t\t\t\t\t\t   Total Price: RM %6.2f\n",totalPrices));
+        System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
+        System.out.println(String.format("\t\t\t\t\t\t\t\t  Total Price: RM %6.2f\n",totalPrices));
         }
         }while(result||confirmChoice==2);
         
