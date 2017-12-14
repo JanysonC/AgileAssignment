@@ -78,9 +78,8 @@ public class MaintainDeli {
                   statMan.setGender(dGender);
                 }else{
                   System.out.println("Invalid for Gender. Enter only F/f or M/m. Thank You!");
-                }
-                
-            }while(!checkGender(dGender));
+                }     
+            }while(!checkGender(dGender)); 
 
             do{
                System.out.print("4. Contact No :");
