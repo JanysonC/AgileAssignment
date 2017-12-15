@@ -230,7 +230,7 @@ public class Assignment {
                 }
                 else 
                     System.out.print(String.format("%d        %s\t\t        RM %5.2f                 %d             RM %6.2f\n",restaurant1.get(g).getFoodNo(),restaurant1.get(g).getName(),restaurant1.get(g).getPrice(),restaurant1.get(g).getQuantity(),restaurant1.get(g).getSubtotal()));
-                }
+                } 
         System.out.println("---------------------------------------------------------------------------------------------------------------------\n");    
         System.out.println(String.format("\t\t\t\t\t\t\t\t  Total Price: RM %6.2f\n",totalPrices));
             }
