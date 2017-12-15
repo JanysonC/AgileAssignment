@@ -1,4 +1,4 @@
-package Main;
+package Objects;
 
 public class DeliveryMan {
     private String Name;
@@ -7,16 +7,18 @@ public class DeliveryMan {
     private String Status;
     private String ClockIn;
     private String ClockOut;
+    private String OrderID;
     
     public DeliveryMan(){}
     
-    public DeliveryMan(String name, String id, String gender, String status, String clockIn, String clockOut){
+    public DeliveryMan(String name, String id, String gender, String status, String clockIn, String clockOut, String orderID){
         this.Name = name;
         this.ID = id;
         this.Gender = gender;
         this.Status = status;
         this.ClockIn = clockIn;
         this.ClockOut = clockOut;
+        this.OrderID = orderID;
     }
     
     public String getName(){
@@ -45,5 +47,11 @@ public class DeliveryMan {
     }
     public String getClockOut(){
         return ClockOut;
+    }
+    public void setOrderID(String orderID){
+        this.OrderID = orderID;
+    }
+    public String getOrderID(){
+        return OrderID;
     }
 }
