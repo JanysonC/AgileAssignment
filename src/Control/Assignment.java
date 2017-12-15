@@ -1,19 +1,17 @@
-package assignment;
+package Control;
 // no   problem
 import Control.orderFood;
-import Control.orderFoodInterface;
-import Model.Food;
+import Interface.orderFoodInterface;
+import Objects.Food;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
-import Model.OrderedFood;
+import Objects.OrderedFood;
 import java.util.Arrays;
 
 public class Assignment {
 
-    
-    
     public static void main(String[] args) {
        
         String abc = "";

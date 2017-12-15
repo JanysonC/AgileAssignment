@@ -1,7 +1,7 @@
-package Main;
+package Control;
 
 import Objects.CustomerOB;
-import Main.StaffDuty;
+import Control.StaffDuty;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -19,7 +19,6 @@ public class CheckDelivery {
     }
     private static String name, password;
     private static List<CustomerOB> cusList = new ArrayList<>();
-    //private static List<CustomerOB> orderList = new ArrayList<>();
     static Scanner scan = new Scanner(System.in);
 
     public static void cusInfo() {

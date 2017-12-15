@@ -1,5 +1,6 @@
-package delipending;
+package Control;
 
+import Objects.DeliveryInfo;
 import java.util.*;
  
 public class DeliPending {

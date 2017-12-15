@@ -1,7 +1,7 @@
 
-package Control;
+package Interface;
 
-import Model.Food;
+import Objects.Food;
 import java.util.ArrayList;
 
 public interface orderFoodInterface {

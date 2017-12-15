@@ -1,5 +1,5 @@
 
-package delipending;
+package Objects;
 
 public class DeliveryInfo {
     private String timeOnDe;

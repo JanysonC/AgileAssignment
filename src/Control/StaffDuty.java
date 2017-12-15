@@ -1,4 +1,4 @@
-package Main;
+package Control;
 
 import Objects.CustomerOB;
 import Objects.*;

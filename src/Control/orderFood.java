@@ -5,7 +5,8 @@
  */
 package Control;
 
-import Model.Food;
+import Interface.orderFoodInterface;
+import Objects.Food;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
