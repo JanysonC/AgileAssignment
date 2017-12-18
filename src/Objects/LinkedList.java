@@ -10,5 +10,5 @@ package Objects;
  * @author AngelQ
  */
 public class LinkedList {
-    
+    private String name;
 }
