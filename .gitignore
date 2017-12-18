@@ -8,3 +8,6 @@ nbactions.xml
 build.xml
 genfiles.properties
 project.xml
+manifest.mf
+build-impl.xml
+project.properties
