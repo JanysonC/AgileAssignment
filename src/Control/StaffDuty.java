@@ -1,15 +1,16 @@
 package Control;
 
+import Interface.DeliveryManInterface;
 import Objects.CustomerOB;
 import Objects.*;
 import java.util.*;
 import java.text.*;
 
-public class StaffDuty {
+public class StaffDuty implements DeliveryManInterface{
 
     public static void main(String[] args) {
-        orderInfo();
-        showInfo();
+       // orderInfo();
+       // showInfo();
     }
 
     private static List<DeliveryMan> dmList = new ArrayList<>();
@@ -21,13 +22,14 @@ public class StaffDuty {
     CustomerOB cust = new CustomerOB();
     static CheckDelivery checkDeliverys = new CheckDelivery();
 
-    public static void personInfo() {
+    @Override
+    public void personInfo() {
         dmList.add(new DeliveryMan("Flora", "DM1234", "Female", "OFF", "", "", ""));
         dmList.add(new DeliveryMan("James", "DM5223", "Male", "OFF", "", "", ""));
         dmList.add(new DeliveryMan("Rock", "DM9198", "Male", "OFF", "", "", ""));
     }
 
-    public static void orderInfo() {
+    public void orderInfo() {
         String orderID;
         String cusID;
         String foodID;
@@ -46,7 +48,7 @@ public class StaffDuty {
         }
     }
 
-    public static void showInfo() {
+    public void showInfo() {
         int choose;
         int decide;
         int number = 1;
@@ -71,7 +73,7 @@ public class StaffDuty {
         } while (decide == 1);
     }
 
-    public static void selectMenu(int no) {
+    public void selectMenu(int no) {
 
         System.out.println("*****************************");
         System.out.println("1.\t Clock In");
